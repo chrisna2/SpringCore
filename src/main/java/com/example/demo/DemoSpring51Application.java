@@ -3,6 +3,7 @@ package com.example.demo;
 import java.util.Locale;
 
 import org.springframework.boot.SpringApplication;
+import org.springframework.boot.WebApplicationType;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.MessageSource;
 import org.springframework.context.annotation.PropertySource;
@@ -22,7 +23,10 @@ public class DemoSpring51Application {
 	*/
 	
 	public static void main(String[] args) {
-		SpringApplication.run(DemoSpring51Application.class, args);
+		SpringApplication aop = new SpringApplication(DemoSpring51Application.class);
+		aop.setWebApplicationType(WebApplicationType.NONE);
+		aop.run(args);
+		//SpringApplication.run(DemoSpring51Application.class, args);
 	}
 	
 	
